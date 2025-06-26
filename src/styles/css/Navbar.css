@@ -1,0 +1,152 @@
+/* Navbar Styles */
+.navbar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 50;
+  transition: all 0.3s ease;
+}
+
+.navbar-scrolled {
+  background-color: rgba(255, 255, 255, 0.95);
+  backdrop-filter: blur(12px);
+  box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.1);
+}
+
+.navbar-transparent {
+  background-color: transparent;
+}
+
+.navbar-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 1rem;
+}
+
+.navbar-content {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 4rem;
+}
+
+.navbar-logo {
+  font-size: 1.25rem;
+  font-weight: 700;
+  background: linear-gradient(to right, #2563eb, #7c3aed);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.navbar-nav {
+  display: none;
+  align-items: center;
+  gap: 2rem;
+}
+
+@media (min-width: 768px) {
+  .navbar-nav {
+    display: flex;
+  }
+}
+
+.navbar-nav-item {
+  position: relative;
+  padding: 0.75rem;
+  font-size: 0.875rem;
+  font-weight: 500;
+  transition: color 0.2s ease;
+  background: none;
+  border: none;
+  cursor: pointer;
+  color: #374151;
+}
+
+.navbar-nav-item:hover {
+  color: #2563eb;
+}
+
+.navbar-nav-item-active {
+  color: #2563eb;
+}
+
+.navbar-nav-indicator {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 2px;
+  background-color: #2563eb;
+}
+
+.navbar-mobile-button {
+  display: block;
+  padding: 0.5rem;
+  background: none;
+  border: none;
+  cursor: pointer;
+  color: #374151;
+}
+
+@media (min-width: 768px) {
+  .navbar-mobile-button {
+    display: none;
+  }
+}
+
+.navbar-mobile-menu {
+  display: block;
+  overflow: hidden;
+  background-color: rgba(255, 255, 255, 0.95);
+  backdrop-filter: blur(12px);
+  border-radius: 0.5rem;
+  margin-top: 0.5rem;
+  transition: all 0.3s ease;
+}
+
+@media (min-width: 768px) {
+  .navbar-mobile-menu {
+    display: none;
+  }
+}
+
+.navbar-mobile-menu-content {
+  padding: 0.5rem 0;
+}
+
+.navbar-mobile-nav-item {
+  display: block;
+  width: 100%;
+  text-align: left;
+  padding: 0.75rem 1rem;
+  font-size: 0.875rem;
+  font-weight: 500;
+  transition: all 0.2s ease;
+  background: none;
+  border: none;
+  cursor: pointer;
+  color: #374151;
+}
+
+.navbar-mobile-nav-item:hover {
+  color: #2563eb;
+  background-color: #f3f4f6;
+}
+
+.navbar-mobile-nav-item-active {
+  color: #2563eb;
+  background-color: #dbeafe;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .navbar-container {
+    padding: 0 0.9375rem;
+  }
+  
+  .navbar-logo {
+    font-size: 1.125rem;
+  }
+}

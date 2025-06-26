@@ -1,0 +1,248 @@
+/* About Section Styles */
+.about {
+  padding: 5rem 0;
+  background-color: #f8fafc;
+}
+
+.about-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 1rem;
+}
+
+.about-title {
+  font-size: 2.5rem;
+  font-weight: 700;
+  text-align: center;
+  margin-bottom: 3rem;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  position: relative;
+}
+
+.about-title::after {
+  content: '';
+  position: absolute;
+  bottom: -10px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 60px;
+  height: 4px;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  border-radius: 2px;
+}
+
+.about-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 3rem;
+  align-items: center;
+}
+
+@media (min-width: 1024px) {
+  .about-grid {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+.about-left {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.about-image-wrapper {
+  position: relative;
+}
+
+.about-image {
+  width: 100%;
+  height: 20rem;
+  background: linear-gradient(135deg, #60a5fa 0%, #a855f7 100%);
+  border-radius: 1rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  font-size: 3.75rem;
+  font-weight: 700;
+  box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.25);
+}
+
+.about-profile-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 50%;
+}
+
+.about-floating-element {
+  position: absolute;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.about-floating-1 {
+  top: -1rem;
+  right: -1rem;
+  width: 5rem;
+  height: 5rem;
+  background-color: #fbbf24;
+  font-size: 1.5rem;
+  animation: bounce 2s infinite;
+}
+
+.about-floating-2 {
+  bottom: -1rem;
+  left: -1rem;
+  width: 4rem;
+  height: 4rem;
+  background-color: #34d399;
+  font-size: 1.25rem;
+  animation: pulse 2s infinite;
+}
+
+.about-personal-details {
+  background: white;
+  border-radius: 0.75rem;
+  padding: 1.5rem;
+  box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.1);
+}
+
+.about-personal-title {
+  font-size: 1.25rem;
+  font-weight: 600;
+  color: #1f2937;
+  margin-bottom: 1rem;
+}
+
+.about-personal-info {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  color: #6b7280;
+}
+
+.about-personal-info p {
+  margin: 0;
+}
+
+.about-right {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.about-prose {
+  max-width: none;
+}
+
+.about-description {
+  color: #374151;
+  line-height: 1.75;
+  margin-bottom: 1.5rem;
+}
+
+.about-highlights {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1rem;
+}
+
+@media (min-width: 768px) {
+  .about-highlights {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+.about-highlight-card {
+  background: white;
+  border-radius: 0.5rem;
+  padding: 1rem;
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease;
+}
+
+.about-highlight-card:hover {
+  box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.1);
+  transform: translateY(-5px);
+}
+
+.about-highlight-content {
+  display: flex;
+  align-items: flex-start;
+  gap: 0.75rem;
+}
+
+.about-highlight-icon {
+  flex-shrink: 0;
+  padding: 0.5rem;
+  background-color: #f8fafc;
+  border-radius: 0.5rem;
+}
+
+.about-highlight-text h4 {
+  font-weight: 600;
+  color: #1f2937;
+  margin-bottom: 0.25rem;
+  margin-top: 0;
+}
+
+.about-highlight-text p {
+  font-size: 0.875rem;
+  color: #6b7280;
+  margin: 0;
+}
+
+@keyframes pulse {
+  0%, 100% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.05);
+  }
+}
+
+@keyframes bounce {
+  0%, 20%, 53%, 80%, 100% {
+    transform: translate3d(0,0,0);
+  }
+  40%, 43% {
+    transform: translate3d(0,-30px,0);
+  }
+  70% {
+    transform: translate3d(0,-15px,0);
+  }
+  90% {
+    transform: translate3d(0,-4px,0);
+  }
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .about {
+    padding: 3.75rem 0;
+  }
+  
+  .about-container {
+    padding: 0 0.9375rem;
+  }
+  
+  .about-title {
+    font-size: 2rem;
+    margin-bottom: 2rem;
+  }
+  
+  .about-image {
+    height: 16rem;
+    font-size: 3rem;
+  }
+  
+  .about-personal-details {
+    padding: 1rem;
+  }
+}
