@@ -39,7 +39,7 @@ const Contact = () => {
       icon: <Linkedin className="text-orange-600" size={24} />,
       title: "LinkedIn",
       value: "Connect with me",
-      href: "https://linkedin.com",
+      href: "https://www.linkedin.com/in/kshitiz-singhal-3a7456236",
       color: "from-orange-500 to-orange-600"
     }
   ]
