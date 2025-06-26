@@ -80,12 +80,19 @@
 }
 
 .hero-profile-wrapper {
-  width: 8rem;
-  height: 8rem;
+  width: 12rem;
+  height: 12rem;
   margin: 0 auto;
   border-radius: 50%;
   background: linear-gradient(to right, #3b82f6, #8b5cf6);
   padding: 0.25rem;
+}
+
+@media (min-width: 768px) {
+  .hero-profile-wrapper {
+    width: 16rem;
+    height: 16rem;
+  }
 }
 
 .hero-profile-inner {

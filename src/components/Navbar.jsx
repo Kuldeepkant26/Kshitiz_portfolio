@@ -29,7 +29,15 @@ const Navbar = ({ activeSection }) => {
   const scrollToSection = (sectionId) => {
     const element = document.getElementById(sectionId)
     if (element) {
-      element.scrollIntoView({ behavior: 'smooth' })
+      // Calculate offset for fixed navbar (80px) with extra padding for mobile
+      const navbarHeight = 80
+      const extraOffset = window.innerWidth <= 768 ? 20 : 0
+      const elementPosition = element.offsetTop - navbarHeight - extraOffset
+      
+      window.scrollTo({
+        top: elementPosition,
+        behavior: 'smooth'
+      })
     }
     setIsOpen(false)
   }

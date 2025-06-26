@@ -2,13 +2,21 @@ import React from 'react'
 import { motion } from 'framer-motion'
 import { ChevronDown, Download, Mail, Linkedin, MapPin, Phone } from 'lucide-react'
 import '../styles/css/Hero.css'
-import profileImage from '../assets/Kshitiz_image.jpeg'
+import profileImage from '../assets/Kshitiz_image2.jpeg'
 
 const Hero = () => {
   const scrollToNext = () => {
     const aboutSection = document.getElementById('about')
     if (aboutSection) {
-      aboutSection.scrollIntoView({ behavior: 'smooth' })
+      // Calculate offset for fixed navbar with extra padding for mobile
+      const navbarHeight = 80
+      const extraOffset = window.innerWidth <= 768 ? 20 : 0
+      const elementPosition = aboutSection.offsetTop - navbarHeight - extraOffset
+      
+      window.scrollTo({
+        top: elementPosition,
+        behavior: 'smooth'
+      })
     }
   }
 
